@@ -1,0 +1,136 @@
+{
+  "title": "Resume Parser Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "personalInfo": {
+      "title": "Personal Information",
+      "type": "object",
+      "description": "Personal contact information from the resume",
+      "editor": "json",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location/address"
+        }
+      }
+    },
+    "summary": {
+      "title": "Professional Summary",
+      "type": "string",
+      "description": "Professional summary or objective from the resume",
+      "editor": "textarea"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "type": "array",
+      "description": "Work experience entries",
+      "editor": "json",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Job title"
+          },
+          "company": {
+            "type": "string",
+            "description": "Company name"
+          },
+          "duration": {
+            "type": "string",
+            "description": "Employment duration"
+          },
+          "responsibilities": {
+            "type": "array",
+            "description": "Key responsibilities and achievements",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "title": "Education",
+      "type": "array",
+      "description": "Educational background",
+      "editor": "json",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {
+            "type": "string",
+            "description": "Degree or certification"
+          },
+          "school": {
+            "type": "string",
+            "description": "School or institution name"
+          },
+          "year": {
+            "type": "string",
+            "description": "Graduation year"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "type": "array",
+      "description": "Technical and professional skills",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "certifications": {
+      "title": "Certifications",
+      "type": "array",
+      "description": "Professional certifications",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "type": "array",
+      "description": "Language proficiencies",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cost": {
+      "title": "API Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "parsedAt": {
+      "title": "Parsed At",
+      "type": "string",
+      "description": "ISO timestamp of when this was parsed",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"actorSpecification": 1, "name": "resume-parser", "title": "AI Resume Parser", "description": "Extract structured data from resumes using AI. Parse experience, education, skills, and contact info.", "version": "1.0.0", "dockerfile": "./Dockerfile", "input": "./.actor/input_schema.json"}

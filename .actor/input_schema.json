@@ -4,10 +4,10 @@
   "schemaVersion": 1,
   "properties": {
     "resumeText": {"title": "Resume Text", "type": "string", "description": "The resume text to parse and analyze", "editor": "textarea", "minLength": 50},
-    "extractSkills": {"title": "Extract Skills", "type": "boolean", "description": "Extract and list skills mentioned in the resume", "default": true},
-    "extractCertifications": {"title": "Extract Certifications", "type": "boolean", "description": "Extract certifications and qualifications from the resume", "default": true},
-    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "enum": ["openai/gpt-4o", "anthropic/claude-3.5-sonnet"], "default": "openai/gpt-4o"},
-    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "isSecret": true}
+    "extractSkills": {"title": "Extract Skills", "type": "boolean", "description": "Extract and list skills mentioned in the resume", "editor": "checkbox", "default": true},
+    "extractCertifications": {"title": "Extract Certifications", "type": "boolean", "description": "Extract certifications and qualifications from the resume", "editor": "checkbox", "default": true},
+    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "editor": "select", "enum": ["openai/gpt-4o", "anthropic/claude-3.5-sonnet"], "default": "openai/gpt-4o"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "editor": "textfield", "isSecret": true}
   },
   "required": ["resumeText", "openrouterApiKey"]
 }
